@@ -1,0 +1,87 @@
+/* Custom styles and glassmorphism utilities */
+
+.glass-panel {
+  background: rgba(13, 21, 42, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-panel-interactive {
+  background: rgba(13, 21, 42, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-interactive:hover {
+  background: rgba(20, 32, 62, 0.65);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-active {
+  background: rgba(17, 28, 55, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(176, 38, 255, 0.7), 0 0 20px rgba(176, 38, 255, 0.4);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.7), 0 0 20px rgba(250, 204, 21, 0.4);
+}
+
+/* Custom Volume Slider */
+input[type="range"].slider-custom {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.12);
+  height: 6px;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"].slider-custom::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00f3ff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"].slider-custom::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  background: #67f7ff;
+}
+
+input[type="range"].slider-custom::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00f3ff;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"].slider-custom::-moz-range-thumb:hover {
+  transform: scale(1.25);
+  background: #67f7ff;
+}
+

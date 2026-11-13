@@ -1,0 +1,97 @@
+/* Custom Animations for Premium Tic Tac Toe */
+
+@keyframes neon-pulse-cyan {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.4), inset 0 0 10px rgba(0, 243, 255, 0.2);
+    border-color: rgba(0, 243, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.75), inset 0 0 20px rgba(0, 243, 255, 0.4);
+    border-color: rgba(0, 243, 255, 1);
+  }
+}
+
+@keyframes neon-pulse-purple {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.4), inset 0 0 10px rgba(176, 38, 255, 0.2);
+    border-color: rgba(176, 38, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(176, 38, 255, 0.75), inset 0 0 20px rgba(176, 38, 255, 0.4);
+    border-color: rgba(176, 38, 255, 1);
+  }
+}
+
+@keyframes laser-sweep {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes hologram-grid {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+.animate-pulse-cyan {
+  animation: neon-pulse-cyan 2s infinite ease-in-out;
+}
+
+.animate-pulse-purple {
+  animation: neon-pulse-purple 2s infinite ease-in-out;
+}
+
+.animate-laser {
+  stroke-dasharray: 1000;
+  animation: laser-sweep 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes heart-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.22);
+  }
+}
+
+.animate-heart-beat {
+  animation: heart-pulse 1.4s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+
+/* Accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
